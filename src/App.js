@@ -1,17 +1,30 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Header from "./components/Header";
+import images from "./images.json";
 
-function App() {
-  return (
-    <body className="fluid-container">
-      <Header />
-    <div>
-      <hi>Hello World</hi>
-    </div>
+class App extends Component {
 
-    </body>
-  );
+  state = {
+    images
+  }
+
+
+  render() {
+
+    console.log(this.state.images);
+
+    return (
+      <div>
+      <div className="fluid-container">
+        <Header />
+      </div>
+      
+      <h1>Hello World</h1>
+      </div>
+    );
+  }
 }
+
 
 export default App;
