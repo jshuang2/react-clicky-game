@@ -12,13 +12,17 @@ class CardList extends Component {
         console.log(this.state.images);
         
         return (
-            
+
             this.state.images.map((image) => (
-            <Card image={image}/>
-        ))
-        
+            <Card 
+                key={image.id} 
+                src={image.image}
+                alt={image.name}
+            />
+            ))
         )
     }
+
 }
 
 export default CardList

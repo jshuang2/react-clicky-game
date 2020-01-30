@@ -16,7 +16,7 @@ class App extends Component {
       </div>
 
       <div className="container">
-      <div class="card-columns">
+      <div className="card-columns">
         <CardList />
       </div>
       </div>

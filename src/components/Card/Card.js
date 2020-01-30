@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import images from "../../images.json";
+import React from 'react';
 
-class Card extends Component {
-    render() {
-        return (
-            <div className="card">
-                <img src="..." className="card-img-top" alt="..." />
-            </div>
-        )
-    }
+function Card (props) {
+
+    return (
+        <div className="card">
+            <img src={props.src} className="card-img-top" alt={props.alt} />
+        </div>
+    )
 }
+
 
 export default Card
