@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import CardList from "./components/CardList/CardList";
 import Wrapper from "./components/Wrapper/Wrapper";
+import Footer from "./components/Footer/Footer";
 
 
 class App extends Component {
@@ -24,7 +25,10 @@ class App extends Component {
           </Wrapper>
       </div>
       
-      
+      <div className="fluid-container">
+        <Footer />
+      </div>
+
       </div>
     );
   }
