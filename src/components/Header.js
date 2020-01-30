@@ -6,7 +6,7 @@ class Header extends Component {
             <div>
                 <nav className="navbar navbar-dark bg-dark" >
                     <div className="container">
-                   <h1>React Clicky Game</h1>
+                   <h1>GoT Clicky Game</h1>
                    <h1>Click an image to begin!</h1>
                    <h1>Score goes here</h1>
                    </div>

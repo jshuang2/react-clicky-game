@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Header from "./components/Header";
 import CardList from "./components/CardList/CardList";
+import Wrapper from "./components/Wrapper/Wrapper";
 
 
 class App extends Component {
@@ -16,9 +17,11 @@ class App extends Component {
       </div>
 
       <div className="container">
-      <div className="card-columns">
-        <CardList />
-      </div>
+          <Wrapper>
+            <div className="card-columns">
+              <CardList />
+            </div>
+          </Wrapper>
       </div>
       
       

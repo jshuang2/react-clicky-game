@@ -12,7 +12,7 @@ class CardList extends Component {
         console.log(this.state.images);
         
         return (
-
+            
             this.state.images.map((image) => (
             <Card 
                 key={image.id} 

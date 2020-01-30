@@ -7,3 +7,10 @@ h1 {
   color: white;
   font-size: 2rem;
 }
+
+.card-columns {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
