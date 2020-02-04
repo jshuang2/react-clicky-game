@@ -48,7 +48,12 @@ class CardList extends Component {
 
 
     resetGame = () => {
-        
+        // this.shuffle(this.state.images);
+
+        this.setState({
+            images: this.shuffle(this.state.images),
+            chosenImages: new Set()
+        })
     }
 
 
