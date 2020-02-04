@@ -35,15 +35,20 @@ class CardList extends Component {
     
     // Function to randomize and shuffle the images array after each chosen card
     
-    shuffle = () => {
+    shuffle = (imagesArray) => {
+        for (let i = imagesArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [imagesArray[i], imagesArray[j]] = [imagesArray[j], imagesArray[i]];
+        }
 
+        console.log(imagesArray);
     }
     // Function to reset the game. This will be called in another function.
 
 
 
     resetGame = () => {
-
+        
     }
 
 
