@@ -12,16 +12,18 @@ class CardList extends Component {
 
     // Function to listen for chosen image. If the image has not yet been selected, push it to a set called ChosenCards. If it has, then call the reset function    
     handleImageChoice = event => {
+
+        console.log(event.target);
         
-        console.log("this is state...." + JSON.stringify(this.state.images))
+        // console.log("this is state...." + JSON.stringify(this.state.images))
         let chosenID = event.target.id;
 
         if (!this.state.chosenImages.has(chosenID)) {
             this.shuffle(this.state.images);
 
-            this.setState(({ chosenImages }) => ({
+            this.setState((state) => ({
                 images,
-                chosenImages: new Set(chosenImages).add(chosenID)
+                chosenImages: state.chosenImages.add(chosenID)
               }));
         }
         else {
@@ -64,17 +66,19 @@ class CardList extends Component {
         return (
             
             this.state.images.map(image => (
-            <div key={image.id} onClick={this.handleImageChoice}>
             <Card 
+                handler={this.handleImageChoice}
                 key={image.id} 
                 src={image.image}
                 alt={image.name}
+                id={image.id}
             />
-            </div>
             ))
         )
     }
 
 }
 
-export default CardList
+
+
+export default CardList 

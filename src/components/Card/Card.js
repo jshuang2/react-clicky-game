@@ -1,11 +1,11 @@
 import React from 'react';
 import "./style.css";
 
-function Card (props) {
+function Card ({src, handler, alt, id}) {
 
     return (
-        <div className="card">
-            <img src={props.src} className="card-img" alt={props.alt} />
+        <div className="card" onClick={handler} id={id}>
+            <img src={src} className="card-img" alt={alt} id={id}/> 
         </div>
     )
 }
