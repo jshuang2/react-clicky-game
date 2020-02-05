@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./style.css";
 
 
 
@@ -12,7 +13,7 @@ class Header extends Component {
             <div>
                 <nav className="navbar navbar-dark bg-dark" >
                     <div className="container">
-                   <h1>GoT Clicky Game</h1>
+                   <h1>Game of Thrones Memory Game</h1>
                    <h1>Click an image to begin!</h1>
                    </div>
                 </nav>
