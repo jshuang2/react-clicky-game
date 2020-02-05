@@ -2,12 +2,11 @@ import React, {Component} from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
 import CardList from "./components/CardList/CardList";
-import Wrapper from "./components/Wrapper/Wrapper";
 import Footer from "./components/Footer/Footer";
 
 
 class App extends Component {
-
+  
 
   render() {
 
@@ -18,11 +17,11 @@ class App extends Component {
       </div>
 
       <div className="container">
-          <Wrapper>
+          
             <div className="card-columns">
-              <CardList />
+              <CardList  />
             </div>
-          </Wrapper>
+          
       </div>
       
       <div className="fluid-container">

@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import images from "../../images.json";
 import Card from "../Card/Card";
+import Score from "../Score/Score";
+import Wrapper from "../Wrapper/Wrapper";
+
 
 class CardList extends Component {
 
         state = {
             images,
-            chosenImages: new Set()
+            chosenImages: new Set(),
+            score: 0,
+            // highScore: 0
           }
+
     
 
     // Function to listen for chosen image. If the image has not yet been selected, push it to a set called ChosenCards. If it has, then call the reset function    
@@ -15,20 +21,23 @@ class CardList extends Component {
 
         console.log(event.target);
         
-        // console.log("this is state...." + JSON.stringify(this.state.images))
         let chosenID = event.target.id;
 
         if (!this.state.chosenImages.has(chosenID)) {
             this.shuffle(this.state.images);
 
-            this.setState((state) => ({
+            this.setState(state => ({
                 images,
-                chosenImages: state.chosenImages.add(chosenID)
+                chosenImages: state.chosenImages.add(chosenID),
+                score: state.score + 1
               }));
+            
         }
         else {
             this.resetGame();
         };
+
+        console.log(this.state.score);
         
     };
     
@@ -39,7 +48,6 @@ class CardList extends Component {
             [imagesArray[i], imagesArray[j]] = [imagesArray[j], imagesArray[i]];
         }
 
-        console.log(imagesArray);
         return imagesArray;
     };
 
@@ -50,7 +58,8 @@ class CardList extends Component {
 
         this.setState({
             images,
-            chosenImages: new Set()
+            chosenImages: new Set(),
+            score: 0
         })
 
         alert("YOU LOST");
@@ -64,8 +73,11 @@ class CardList extends Component {
         
         
         return (
-            
-            this.state.images.map(image => (
+            <div>
+
+            <Score score={this.state.score} />
+            <Wrapper>
+            {this.state.images.map(image => (
             <Card 
                 handler={this.handleImageChoice}
                 key={image.id} 
@@ -73,10 +85,13 @@ class CardList extends Component {
                 alt={image.name}
                 id={image.id}
             />
-            ))
+            ))}
+            </Wrapper>
+            </div>
         )
+        
     }
-
+    
 }
 
 

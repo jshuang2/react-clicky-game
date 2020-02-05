@@ -12,7 +12,11 @@
     cursor: pointer;
 }
 
-/* img:hover {
-    
-} */
+.grow {
+    transition: all .1s ease-in-out; }
+
+.grow:hover { 
+    transform: scale(1.07); 
+}
+
 

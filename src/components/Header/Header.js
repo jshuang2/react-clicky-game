@@ -1,6 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+
 
 class Header extends Component {
+
+
+    
+
     render() {
         return (
             <div>
@@ -8,7 +14,6 @@ class Header extends Component {
                     <div className="container">
                    <h1>GoT Clicky Game</h1>
                    <h1>Click an image to begin!</h1>
-                   <h1>Score goes here</h1>
                    </div>
                 </nav>
             </div>
