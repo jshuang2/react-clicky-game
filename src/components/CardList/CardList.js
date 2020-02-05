@@ -32,9 +32,14 @@ class CardList extends Component {
                 score: state.score + 1
               }));
             
+            console.log(this.state.chosenImages.size);
+            this.didWin(this.state.chosenImages);
+            
         }
         else {
             this.resetGame();
+            
+            alert("YOU LOST");
         };
 
         console.log(this.state.score);
@@ -51,6 +56,14 @@ class CardList extends Component {
         return imagesArray;
     };
 
+    didWin = (mySet) => {
+        if (mySet.size >= 11) {
+            
+            this.resetGame();
+            alert("YOU WON!");   
+        }
+    }
+
 
     // Function to reset the game. This will be called in another function.
     resetGame = () => {
@@ -62,7 +75,6 @@ class CardList extends Component {
             score: 0
         })
 
-        alert("YOU LOST");
     };
 
 
