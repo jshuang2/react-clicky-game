@@ -7,11 +7,30 @@ import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   
+  state = {
+    play: false
+  }
+
+  url = "https://ia800908.us.archive.org/12/items/tvtunes_20712/Game%20of%20Thrones.mp3";
+  audio = new Audio(this.url);
+
+  componentDidMount() {
+    this.play()
+  }
+
+  play = () => {
+    this.setState({ play: true })
+      this.audio.play();
+    }
+
+
+
 
   render() {
 
     return (
       <div>
+
       <div className="fluid-container">
         <Header />
       </div>
