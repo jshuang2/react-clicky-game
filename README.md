@@ -4,6 +4,10 @@ A memory game created with React where the user wins by not clicking the same im
 
 View the deployed application at: <b><a href="https://game-of-thrones-memory.netlify.com/" target="_blank">https://game-of-thrones-memory.netlify.com/</a></b>
 
+### Technologies Used
+ - React JS
+ - Express JS
+ - Node
 
 ## How to play
 
