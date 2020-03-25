@@ -15,6 +15,7 @@ class App extends Component {
   audio = new Audio(this.url);
 
   componentDidMount() {
+    console.log("Component Mounted")
     this.play()
   }
 
